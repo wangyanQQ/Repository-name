@@ -40,63 +40,71 @@ include_once('./header.php');
           <div class="panel-body">
             <form class="form-horizontal myform">
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+                <label for="inputEmail3" class="col-sm-3 control-label">用户名</label>
                 <div class="col-sm-9">
-                  <input type="email" class="form-control"  placeholder="Email">
+                <p>xiaoq</p>
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+                <label for="inputEmail3" class="col-sm-3 control-label">真实姓名</label>
                 <div class="col-sm-9">
-                  <input type="email" class="form-control"  placeholder="Email">
+                 <p>小强</p>
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+                <label for="inputEmail3" class="col-sm-3 control-label">证件号码</label>
                 <div class="col-sm-9">
-                  <input type="email" class="form-control"  placeholder="Email">
+                  <p>512************4646</p>
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+                <label for="inputEmail3" class="col-sm-3 control-label">手机号码</label>
                 <div class="col-sm-9">
-                  <input type="email" class="form-control"  placeholder="Email">
+                  <input type="text" name="tell" class="form-control"  placeholder="请输入你的手机号码">
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+                <label for="inputEmail3" class="col-sm-3 control-label">联系电话</label>
                 <div class="col-sm-9">
-                  <input type="email" class="form-control"  placeholder="Email">
+                  <input type="text" class="form-control"  placeholder="请输入你的联系电话">
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+                <label for="inputEmail3" class="col-sm-3 control-label">个人学历</label>
                 <div class="col-sm-9">
-                  <input type="email" class="form-control"  placeholder="Email">
+                <select class="form-control" name="edu" style="width: 180px">
+                    <option value="1">初中</option>
+                    <option value="2">中专/高中</option>
+                    <option value="3">专科</option>
+                    <option value="4">本科</option>
+                    <option value="5">硕士研究生</option>
+                    <option value="6">博士研究生</option>
+                </select>
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+                <label for="inputEmail3" class="col-sm-3 control-label">个人收入</label>
                 <div class="col-sm-9">
-                  <input type="email" class="form-control"  placeholder="Email">
+                <select class="form-control" name="salaryLevel" style="width: 180px">
+                      <option value="1">1000元以下</option>
+                      <option value="2">1000元-1999元</option>
+                      <option value="3">2000元-2999元</option>
+                      <option value="4">3000-4999</option>
+                      <option value="5">5000-8999</option>
+                      <option value="6">10000以上</option>
+                  </select>
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+                <label for="inputEmail3" class="col-sm-3 control-label">联系地址</label>
                 <div class="col-sm-9">
-                  <input type="email" class="form-control"  placeholder="Email">
+                  <input type="text" class="form-control" name="address"  placeholder="请输入你的联系地址">
                 </div>
-              </div>
-              <div class="form-group">
-                <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
-                <div class="col-sm-9">
-                  <input type="password" class="form-control"  placeholder="Password">
-                </div>
-              </div>
+              </div>          
 
               <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-9">
-                  <button type="submit" class="btn btn-default">Sign in</button>
+                  <button type="submit" class="btn btn-primary">保存数据</button>
                 </div>
               </div>
             </form>

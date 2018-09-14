@@ -26,7 +26,7 @@
           <a href="#">我要投资</a>
         </li>
         <li>
-          <a href="#">我要借款</a>
+          <a href="./invest.php">我要借款</a>
         </li>
         <li>
           <a href="./personal.php">个人中心</a>

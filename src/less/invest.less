@@ -1,0 +1,53 @@
+// 引入头部与子导航样式
+@import "./template.less";        
+// 引入尾部的样式
+@import "./footer.less";
+@import "./sidebar.less";
+
+
+// 我要借款
+.invest-Center{
+    margin-top:20px;
+    .panel-default{
+        .panel-heading{
+            background-color:#40d47e;
+            color:#fff;
+            &:nth-of-type(2){
+                background-color: #ec7e20;
+            }
+            &:nth-of-type(3){
+                background-color: #2ca2ee;
+            }
+        }
+        .panel-body{
+            background-color: #f9f9f9;
+            font-size:12px;
+            p{
+                margin-bottom: 5px;
+                &:nth-of-type(1){
+                    font-size:14px;
+                }
+               span{
+                font-style:italic;
+               }
+            }
+            ul{
+                li{
+                    list-style: none;
+                    line-height:20px;
+                    padding-left:20px;
+                    background: url(../../../images/sequare.png)no-repeat left center;
+                }
+            }
+            button{
+                border-radius: 20px;               
+                a{
+                    color:#fff;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

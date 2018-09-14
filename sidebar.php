@@ -50,10 +50,10 @@
             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
               <div class="panel-body">
                 <p>
-                  <a href="#">账户信息</a>
+                  <a href="./personal.php">账户信息</a>
                 </p>
                 <p>
-                  <a href="#">实名认证</a>
+                  <a href="./realAuth.php">实名认证</a>
                 </p>
                 <p>
                   <a href="#">银行卡管理</a>
