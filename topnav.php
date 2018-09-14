@@ -22,13 +22,19 @@
 
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="#">首页</a>
+            <a href="./index.php">首页</a>
           </li>
           <li>
             <a href="#">小强</a>
           </li>
           <li>
             <a href="#">赶快充值</a>
+          </li>
+          <li>
+            <a href="./login.php">登录</a>
+          </li>
+          <li>
+            <a href="./register.php">注册</a>
           </li>
           <li>
             <a href="#">注销</a>

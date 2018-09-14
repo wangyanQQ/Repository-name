@@ -20,7 +20,7 @@
       <!-- <div class="collapse navbar-collapse"> -->
       <ul class="nav navbar-nav">
         <li class="active">
-          <a href="#">首页</a>
+          <a href="./index.php">首页</a>
         </li>
         <li>
           <a href="#">我要投资</a>
@@ -29,7 +29,7 @@
           <a href="#">我要借款</a>
         </li>
         <li>
-          <a href="#">个人中心</a>
+          <a href="./personal.php">个人中心</a>
         </li>
         <li>
           <a href="#">新手指引</a>

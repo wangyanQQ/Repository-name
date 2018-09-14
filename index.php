@@ -243,7 +243,7 @@ include_once('./footer.php');
 ?>
   <script src='./lib/jquery/jquery.min.js'></script>
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src='./dist/js/p2p.min.js'></script>
+  <script src='./dist/js/index.min.js'></script>
 
 </body>
 
