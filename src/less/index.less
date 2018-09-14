@@ -1,0 +1,72 @@
+@import "./template.less";
+  // banner图
+.carousel-inner .item img{
+                    margin: 0 auto; 
+                    width:100%;
+                    }
+    // 特点
+.row{
+    .col-sm-4{
+        background: url(../../../images/feature01.png)no-repeat left center;
+        padding-left:75px;
+        &:nth-child(2){
+            background: url(../../../images/feature02.png)no-repeat left center;
+        }
+        &:nth-child(3){
+            background: url(../../../images/feature03.png)no-repeat left center;
+        }
+    }
+}
+        
+// 内容
+.panel-default{
+                border:none;
+            .panel-heading{        
+                background-color:transparent;
+                padding:0px;
+                h3{
+                    margin:0px;
+                    padding:5px 0px;
+                    border-bottom: 3px solid  @color2e8ece;
+                    font-weight: bold;
+                }
+                a{
+                    margin-top:15px;
+                }
+            }
+}
+
+table{
+    margin-top:10px;   
+}
+
+// 改变表格在小屏上的样式
+@media screen and (max-width: 520px){
+    .Thidden{
+        display: none;
+    }
+}
+
+// 最新资讯
+.panel-default{
+    ul{
+        list-style: none;
+        li{
+            line-height: 30px;
+            border-bottom: 1px dashed #ccc;
+            a{
+                color:#555;
+                &:hover{
+                    color:#09d;
+                    text-decoration:none;
+                }
+            }
+        }
+    }
+}
+// 引入尾部
+@import "./footer.less";
+
+
+
+
