@@ -21,7 +21,7 @@ include_once('./header.php');
 
   <!-- 内容 -->
 
-  <div class="container userInfo-Center">
+  <div class="container realAuth-body">
     <div class="row">
       <!-- 主体侧边栏 -->
       <div class="col-xs-12 col-sm-3  Sidebar">
@@ -32,7 +32,7 @@ include_once('./header.php');
 
       </div>
       <!-- 右侧主体 -->
-      <div class="col-xs-12 col-sm-9 realAuth-body">
+      <div class="col-xs-12 col-sm-9 ">
         <div class="panel panel-default">
           <div class="panel-heading">
             实名认证

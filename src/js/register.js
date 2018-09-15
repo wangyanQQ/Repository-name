@@ -36,10 +36,10 @@ $(document).ready(function () {
             max: 12,
             message: '密码长度必须是6~12之间'
           },
-          regexp: {
+         /*  regexp: {
             regexp: /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,21}$/,
             message: '密码只能由字母、数字、点和下划线组成。'
-          },
+          }, */
           different: {
             field: 'username',
             message: '密码不能与用户名相同'
@@ -86,7 +86,7 @@ $(document).ready(function () {
       },
 
     }
-  })
+  })  
     .on('success.form.bv', function (e) {
       // Prevent form submission
       e.preventDefault();
@@ -95,11 +95,18 @@ $(document).ready(function () {
       var $form = $(e.target);
 
       // Get the BootstrapValidator instance
-      var bv = $form.data('bootstrapValidator');
-
-      // Use Ajax to submit form data
-      $.post($form.attr('action'), $form.serialize(), function (result) {
-        console.log(result);
-      }, 'json');
+      var bv = $form.data('bootstrapValidator');   
+    //  console.log(result);     
+      // 发送ajax请求
+     $.post("../../../api/userAdd.php", $form.serialize(), function (result) {
+       console.log("后端发送过来的数据",result.isSuccess);
+        // 根据后端传送过来的数据做出判断
+       if(!result.isSuccess){
+          alert(result.msg);         
+        }else{
+          alert(result.msg);
+          location.href="./login.php";
+        }   /**/
+      }, 'json'); 
     });
 });

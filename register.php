@@ -36,7 +36,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">用户注册</div>
       <div class="panel-body">
-        <form class="form-horizontal myform center-block" id="defaultForm">
+        <form class="form-horizontal myform center-block" id="defaultForm" method="post">
         <p>请填写注册信息，点击“提交注册”即可完成注册！</p>
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-4 control-label">用户名</label>

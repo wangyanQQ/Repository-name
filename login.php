@@ -27,7 +27,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">用户登录</div>
       <div class="panel-body">
-        <form class="form-horizontal myform" id="myForm">    
+        <form class="form-horizontal myform" id="myForm" method="post">    
           <p>请输入用户名和密码</p>      
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-4 control-label" >用户名</label>
@@ -44,13 +44,30 @@
           <div class="form-group">
             <div class="col-sm-offset-4 col-sm-5">
               <button type="submit" class="btn btn-sm btn-success">登录</button>
-              <a href="#">新用户，马上注册</a>
+              <a href="./register.php">新用户，马上注册</a>
             </div>
           </div>
         </form>
       </div>
     </div>
   </div>
+    <!-- 模态框 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalTitle"></h4>
+      </div>
+      <div class="modal-body" id="myModalbody">      
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>       
+      </div>
+    </div>
+  </div>
+</div>
+
   <?php
   include_once("./footer.php");
   ?>
