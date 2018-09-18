@@ -1,0 +1,61 @@
+// 引入头部与子导航样式
+@import "./template.less";        
+// 引入尾部的样式
+@import "./footer.less";
+@import "./sidebar.less";
+
+.borrowApply-Center{
+    margin-top:10px;
+    .Right-body{       
+        font-size:12px;
+        .body_top{
+            background-color: #F4F8FA;
+            border-left:2px solid #0099DD;
+            h4{
+                color:#09d;
+                font-size:24px;
+            }
+            p{
+                color:#31708f;
+                &:nth-of-type(2){
+                    margin-left:30px;
+                }
+                span{
+                    color:#a94442;
+                }
+            }
+        }
+    }
+    .body-center{
+        border-bottom:1px solid #ccc;
+        margin:40px 0px 20px 0px;
+        button{
+            font-size:14px;
+            padding:0px 5px;
+            margin:7px 0px 0px 10px;
+        }
+    }
+    .myform{
+        position:relative;
+        .form-group{        
+            width:60%;  
+                        
+        }   
+        .el-borrow-form-tip{
+            width: 230px;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+            box-shadow: 1px 1px 20px #ddd;
+            padding: 20px 30px;
+            position: absolute;
+            top: 10px;
+            right: 0px;
+                 
+            }
+     }   
+}
+@media screen and(max-width:768px){
+    .el-borrow-form-tip{
+       display: none;
+    }
+}  

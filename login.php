@@ -57,9 +57,9 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalTitle"></h4>
+        <h4 class="modal-title" id="myModalTitle">标题</h4>
       </div>
-      <div class="modal-body" id="myModalbody">      
+      <div class="modal-body" id="myModalbody"> 内容     
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>       
@@ -71,7 +71,7 @@
   <?php
   include_once("./footer.php");
   ?>
-   <script src='./lib/jquery/jquery.min.js'></script>
+<script src='./lib/jquery/jquery.min.js'></script>  
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="./lib/bootstrapvalidator/js/bootstrapValidator.min.js"></script>
   <script src="./dist/js/index.min.js"></script>

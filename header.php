@@ -18,18 +18,18 @@
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <!-- <div class="collapse navbar-collapse"> -->
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" id="addclass" >
         <li class="active">
-          <a href="./index.php">首页</a>
+          <a href="./index.php?code=0">首页</a>
         </li>
         <li>
-          <a href="#">我要投资</a>
+          <a href="./invest.php?code=1">我要投资</a>
         </li>
         <li>
-          <a href="./invest.php">我要借款</a>
+          <a href="./borrow.php?code=2">我要借款</a>
         </li>
         <li>
-          <a href="./personal.php">个人中心</a>
+          <a href="./personal.php?code=3">个人中心</a>
         </li>
         <li>
           <a href="#">新手指引</a>
@@ -43,3 +43,13 @@
     </div>
     <!-- /.container -->
   </nav>
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script>
+  // 获取地址
+ var url=window.location.href;
+//  获取地址后的参数值
+var urlcode=url.split("=")[1];
+$("#addclass li").eq(urlcode).addClass("active").siblings().removeClass("active");
+//  console.log(urlcode);
+  
+  </script>

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 ,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>personal.php</title>
   <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
@@ -12,6 +12,8 @@
 </head>
 
 <body>
+<script src='./lib/jquery/jquery.min.js'></script>
+<script src="./dist/js/cheackState.min.js"></script>
   <?php
 include_once('./topnav.php');
 ?>
@@ -21,10 +23,10 @@ include_once('./header.php');
 
   <!-- 内容 -->
 
-  <div class="container Personal-Center">
+  <div class="container Personal-Center" id="personal">
     <div class="row">
       <!-- 主体侧边栏 -->
-      <div class="col-xs-12 col-sm-3  Sidebar">
+      <div class="col-xs-6 col-sm-3  Sidebar">
 
        <?php
        include_once('./sidebar.php');
@@ -33,13 +35,14 @@ include_once('./header.php');
       </div>
       <!-- 右侧主体 -->
       <div class="col-xs-12 col-sm-9 Right-body">
+      <button type="button" class="btn btn-primary btn-xs" id="btn">隐藏</button>
         <div class="panel panel-default">
           <div class="panel-heading">
             <div class="row">
-              <div class="col-xs-12 col-sm-2">
-                <img class="img-responsive" src="./images/head_icon.jpg" alt="源码时代logo">
+              <div class="col-xs-12 col-sm-4  col-md-2">
+                <img class="img-thumbnail img-responsive" src="./images/head_icon.jpg" alt="源码时代logo">
               </div>
-              <div class="col-xs-12 col-sm-10 text-content">
+              <div class="col-xs-12 col-sm-8 col-md-10 text-content">
                 <p>昵 称：源代码教育</p>
                 <p>用户名：小强</p>
                 <p>最后登录时间：2016-10-25 15:30:10</p>
@@ -69,7 +72,7 @@ include_once('./header.php');
             <div class="row bottom">
               <div class="col-xs-12 col-sm-6 col-md-3">                
                 <p>实名认证</p>
-                <p>未认证<a href="#">未认证，马上认证</a></p>
+                <p>未认证<a href="./realAuth.php">未认证，马上认证</a></p>
                 <p>实名认证之后才能在平台投资</p>  
               </div>             
                              
@@ -102,9 +105,10 @@ include_once('./header.php');
   <?php
 include_once('./footer.php');
 ?>
-  <script src='./lib/jquery/jquery.min.js'></script>
+ 
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
   <script src='./dist/js/index.min.js'></script>
+  <script src='./dist/js/personal.min.js'></script>
 
 </body>
 

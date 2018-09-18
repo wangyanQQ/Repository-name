@@ -21,25 +21,10 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
         <ul class="nav navbar-nav navbar-right">
-          <li>
+          <li id="first">
             <a href="./index.php">首页</a>
-          </li>
-          <li>
-            <a href="#">小强</a>
-          </li>
-          <li>
-            <a href="#">赶快充值</a>
-          </li>
-          <li>
-            <a href="./login.php">登录</a>
-          </li>
-          <li>
-            <a href="./register.php">注册</a>
-          </li>
-          <li>
-            <a href="#">注销</a>
-          </li>
-          <li>
+          </li> 
+          <li >
             <a href="#">帮助</a>
           </li>
           <li>
@@ -52,3 +37,38 @@
     </div>
     <!-- /.container -->
   </nav>
+<script src="./lib/jquery/jquery.min.js"></script>
+   <script>
+      $.get("./api/cheackState.php",function(data){
+        data=JSON.parse(data);
+        // console.log(data);
+        if(data.isSuccess){
+          var result=`<li>
+            <a href="#">${data.uaername}</a>
+          </li>
+          <li>
+            <a href="#">赶快充值</a>
+          </li>
+          <li>
+            <a href="./api/loginout.php">注销</a>
+          </li>`
+          $("#first").after(result);
+
+        }else{
+
+        var result1=` <li>
+            <a href="./login.php">登录</a>
+          </li>
+          <li>
+            <a href="./register.php">注册</a>
+          </li>`
+        }
+        $("#first").after(result1);
+
+      })
+  
+  
+  
+  
+  
+  </script>

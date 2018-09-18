@@ -15,7 +15,11 @@ $rs=mysqli_fetch_assoc($result);
 
 // 判断
  if($rs!=null){
-    $rsArray=["isSuccess"=>true,"msg"=>"用户登录成功!"];
+    // 设置sisson
+    session_start();
+    $_SESSION["username"]=$rs["username"];
+    $_SESSION["userid"]=$rs["userid"];
+    $rsArray=["isSuccess"=>true,"msg"=>"用户登录成功!","username"=> $_SESSION["username"]];
     //json_encode() 把关联数组转换为json格式
     echo json_encode($rsArray);
 }
@@ -23,6 +27,6 @@ else{
     $rsArray=["isSuccess"=>false,"msg"=>"用户登录失败!"];
     echo json_encode($rsArray);
 } /**/
-
-
+// 释放内存
+mysqli_close($link);
 ?>

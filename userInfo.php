@@ -12,6 +12,8 @@
 </head>
 
 <body>
+<script src='./lib/jquery/jquery.min.js'></script>
+<script src="./dist/js/cheackState.min.js"></script>
   <?php
 include_once('./topnav.php');
 ?>
@@ -117,7 +119,7 @@ include_once('./header.php');
   <?php
 include_once('./footer.php');
 ?>
-  <script src='./lib/jquery/jquery.min.js'></script>
+  <!-- <script src='./lib/jquery/jquery.min.js'></script> -->
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
   <script src='./dist/js/index.min.js'></script>
 

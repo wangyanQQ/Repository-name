@@ -10,11 +10,22 @@
         // 右侧主体
         .Right-body{
             font-size:12px;
+            #btn{
+                position: absolute;
+                left:15px;
+                top:0px;
+                display: none;
+            }
             .panel-default{
                 padding:15px;
                 .panel-heading{
                     background-color: transparent;
                     border-color: transparent;
+                    
+                    img{
+                        margin-bottom:10px;
+                        width:80px;
+                    }
                     .text-content{
                         padding-left:0px;
                     }
@@ -61,5 +72,28 @@
         }
 }
 
-
+// 在超小屏下的显示
+@media screen and(max-width:768px){
+    .Personal-Center{        
+        height:700px;
+        position:relative;
+        left:0;
+        transition:all 1s;//过渡效果
+        #Sidebar{
+            position:absolute;
+            left: 0px;           
+        }
+        .Right-body{
+            position:absolute;
+            right:-50%;
+            #btn{
+                display:inline-block;
+            }
+        }      
+       
+    }
+    .Personal-Center.active{
+        left:-50%;
+    }
+}
 

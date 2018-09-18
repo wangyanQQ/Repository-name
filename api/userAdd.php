@@ -24,4 +24,8 @@ else{
     $rsArray=["isSuccess"=>false,"msg"=>"用户注册失败!"];
     echo json_encode($rsArray);
 }
+// 释放内存
+ mysqli_free_result($result);
+// 关闭数据库链接
+mysqli_close($link);
 ?>
