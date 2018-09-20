@@ -29,11 +29,14 @@
             </div>
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
               <div class="panel-body">
-                <p>
-                  <a href="#">借款项目</a>
+              <p>
+                  <a href="./borrow_apply.php?id=t1">申请借款</a>
                 </p>
                 <p>
-                  <a href="#">还款明细</a>
+                  <a href="./borrow_list.php">借款项目</a>
+                </p>
+                <p>
+                  <a href="./borrow_echarts.php">借款报表</a>
                 </p>
               </div>
             </div>

@@ -99,7 +99,7 @@ $(document).ready(function () {
     //  console.log(result);     
       // 发送ajax请求
      $.post("../../../api/userAdd.php", $form.serialize(), function (result) {
-       console.log("后端发送过来的数据",result.isSuccess);
+      //  console.log("后端发送过来的数据",result.isSuccess);
         // 根据后端传送过来的数据做出判断
        if(!result.isSuccess){
           alert(result.msg);         

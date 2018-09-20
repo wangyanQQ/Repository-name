@@ -24,7 +24,7 @@ include_once('./header.php');
   <div class="container borrowApply-Center">
     <div class="row">
       <!-- 主体侧边栏 -->
-      <div class="col-xs-12 col-sm-3  Sidebar">
+      <div class="col-xs-6 col-sm-3  Sidebar">
         <?php
        include_once('./sidebar.php');
        ?>
@@ -48,13 +48,13 @@ include_once('./header.php');
           <h4 class="pull-left">借款信息</h4>
           <button type="button" class=" pull-left btn btn-primary btn-sm">信用标</button>
         </div>
-        <form class="form-horizontal myform">
+        <form class="form-horizontal myform" id="myForm">
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-4 control-label">借款类型</label>
             <div class="col-sm-8">
               <div class="input-group">
-                <select class="form-control" id="select">
-                  <option value="t1">信用贷</option>
+                <select class="form-control" id="select" name="borrowType">
+                  <option value="t1" >信用贷</option>
                   <option value="t2">车易贷</option>
                   <option value="t3">房易贷</option>
                 </select>
@@ -65,7 +65,7 @@ include_once('./header.php');
             <label for="inputEmail3" class="col-sm-4 control-label">借款金额</label>
             <div class="col-sm-8">
               <div class="input-group">
-                <input type="text" class="form-control" id="exampleInputAmount" placeholder="请输入借款金额">
+                <input type="text"name="borrowAmount" class="form-control" id="exampleInputAmount" placeholder="请输入借款金额">
                 <div class="input-group-addon">元</div>
               </div>
             </div>
@@ -74,7 +74,7 @@ include_once('./header.php');
             <label for="inputEmail3" class="col-sm-4 control-label">借款利息</label>
             <div class="col-sm-8">
               <div class="input-group">
-                <input type="text" class="form-control" id="exampleInputAmount" placeholder="">
+                <input type="text" name="currentRate" class="form-control" id="exampleInputAmount" placeholder="">
                 <div class="input-group-addon">%</div>
               </div>
             </div>
@@ -83,7 +83,7 @@ include_once('./header.php');
             <label for="inputEmail3" class="col-sm-4 control-label">借款期限</label>
             <div class="col-sm-8">
               <div class="input-group">
-                <select class="form-control">
+                <select class="form-control" name="monthes2Return">
                   <option>1</option>
                   <option>3</option>
                   <option>6</option>
@@ -99,10 +99,10 @@ include_once('./header.php');
             <label for="inputEmail3" class="col-sm-4 control-label">还款方式</label>
             <div class="col-sm-8">
               <label class="radio-inline">
-                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="按月分期"> 按月分期
+                <input type="radio" name="repayment" id="inlineRadio1" value="按月分期"> 按月分期
               </label>
               <label class="radio-inline">
-                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="按月到期"> 按月到期
+                <input type="radio" name="repayment" id="inlineRadio2" value="按月到期"> 按月到期
               </label>
             </div>
           </div>
@@ -110,7 +110,16 @@ include_once('./header.php');
             <label for="inputEmail3" class="col-sm-4 control-label">最小投标</label>
             <div class="col-sm-5">
               <div class="input-group">
-                <input type="text" class="form-control" id="exampleInputAmount" placeholder="">
+                <input type="text" name="minAmount" class="form-control" id="exampleInputAmount" placeholder="">
+                <div class="input-group-addon">元</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-4 control-label">最大投标</label>
+            <div class="col-sm-5">
+              <div class="input-group">
+                <input type="text" name="maxAmount" class="form-control" id="exampleInputAmount" placeholder="">
                 <div class="input-group-addon">元</div>
               </div>
             </div>
@@ -119,7 +128,7 @@ include_once('./header.php');
             <label for="inputEmail3" class="col-sm-4 control-label">投标奖金</label>
             <div class="col-sm-8">
               <div class="input-group">
-                <input type="text" class="form-control" id="exampleInputAmount" placeholder="0">
+                <input type="text"name="rewardAmount" class="form-control" id="exampleInputAmount" placeholder="0">
                 <div class="input-group-addon">%</div>
               </div>
             </div>
@@ -128,7 +137,7 @@ include_once('./header.php');
             <label for="inputEmail3" class="col-sm-4 control-label">招标天数</label>
             <div class="col-sm-8">
               <div class="input-group">
-                <select class="form-control" name="disableDays">
+                <select class="form-control" name="disableDays">                
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -150,7 +159,7 @@ include_once('./header.php');
             <label for="inputEmail3" class="col-sm-4 control-label">借款标题</label>
             <div class="col-sm-8">
               <div class="input-group">
-                <input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
+                <input type="text" name="borrowTitle" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
               </div>
             </div>
           </div>
@@ -158,13 +167,13 @@ include_once('./header.php');
             <label for="inputEmail3" class="col-sm-4 control-label">借款描述</label>
             <div class="col-sm-8">
               <div class="input-group">
-                <textarea class="form-control" rows="2" cols="30"></textarea>
+                <textarea name="description" class="form-control" rows="2" cols="30"></textarea>
               </div>
             </div>
           </div>
           <div class="form-group">
             <div class="col-sm-offset-4 col-sm-8">
-              <button type="submit" class="btn btn-primary">提交申请</button>
+              <button type="button" id="btn" class="btn btn-primary">提交申请</button>
             </div>
           </div>
 
@@ -196,13 +205,7 @@ include_once('./footer.php');
   <!-- <script src='./lib/jquery/jquery.min.js'></script> -->
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
   <script src='./dist/js/index.min.js'></script>
-  <script>
-    var url = location.href;
-    var urlResult = url.split("=")[1];
-    $("#select").val(urlResult)
-  // console.log(urlResult) 
-
-  </script>
+<script src="./dist/js/borrow_apply.min.js"></script>
 
 </body>
 
